@@ -50,43 +50,20 @@
 // });
 
 // Подключение свайпера
-// import Swiper, { Pagination, Autoplay, Navigation } from "swiper";
-// Swiper.use([Pagination, Autoplay, Navigation]);
-// const swiper = new Swiper(".swiper", {
-// 	speed: 800,
-// 	spaceBetween: 10,
-// 	grabCursor: true,
-// 	slideClass: "swiper-slide",
-// 	slideActiveClass: "hero__slide-active",
-// 	slidesPerView: 1,
-// 	navigation: {
-// 		nextEl: ".hero__btn-next",
-// 		prevEl: ".hero__btn-prev",
-// 		disabledClass: "hero__btn-disabled",
-// 	},
-// 	pagination: {
-// 		el: ".swiper-pagination",
-// 		bulletClass: "hero__bullet",
-// 		bulletActiveClass: "hero__bullet-active",
-// 		clickable: true,
-// 		renderBullet: function (index, className) {
-// 			return `<li class="${className}" tabindex="0">${paginationElems[index]}</li>`;
-// 		},
-// 	},
-// 	on: {
-// 		init: () => {
-// 			swiperSlides.forEach((slide) => {
-// 				slide.inert = true;
-// 			});
-// 			swiperSlides[defaultActiveSlide].inert = false;
-// 		},
-// 		slideChange: () => {
-// 			swiperSlides[swiper.activeIndex].inert = false;
-// 			swiperSlides[swiper.previousIndex].inert = true;
-// 		},
-// 	},
-// });
-
+import Swiper, { Pagination, Autoplay, Navigation } from "swiper";
+Swiper.use([Pagination, Autoplay, Navigation]);
+const heroSlider = new Swiper(".hero__slider", {
+	speed: 800,
+	slidesPerView: 1,
+	pagination: {
+		el: ".hero__pagination",
+		bulletClass: "hero__bullet",
+		bulletActiveClass: "hero__bullet-active",
+		clickable: true,
+		bulletElement: "li",
+	},
+});
+heroSlider.activeIndex = 2;
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
 // AOS.init();

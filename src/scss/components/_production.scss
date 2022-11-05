@@ -10,15 +10,6 @@
 			display: flex;
 		}
 	}
-	&__title {
-		margin-top: 0;
-		margin-bottom: 24px;
-		color: var(--dark-blue-color);
-		font-feature-settings: "pnum" on, "lnum" on;
-		font-weight: 600;
-		font-size: 29px;
-		line-height: 116%;
-	}
 	&__subtitle {
 		display: flex;
 		align-items: center;
@@ -33,6 +24,7 @@
 	&__arrow {
 		transform: rotate(-90deg);
 		margin-top: 4px;
+		transition: transform 0.4s ease-in-out;
 	}
 	&__list {
 		padding-left: 16px;
